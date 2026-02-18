@@ -1,17 +1,25 @@
-# Prepare project for Vercel
+# 🎂 Birthday Site for Arushi
 
-This repository contains a static HTML birthday site. Changes made to better support Vercel deployment:
+A static HTML birthday website with messages, photos, and videos.
 
-- Added a hyphenated copy of the "why" page at `/why-you-are-special/` (Vercel-friendly path).
-- Added `vercel.json` with `cleanUrls` enabled.
+## Structure
 
-Notes and recommendations:
-
-- Filenames with spaces remain as-is (images / videos). Vercel will still serve them, but renaming binary files is recommended for cleaner URLs. If you want, I can rename them and update all references.
-- To deploy: install the Vercel CLI (`npm i -g vercel`) or use the Vercel dashboard and point it at this repo. Then run:
-
-```bash
-vercel --prod
+```
+├── index.html                   # Landing page
+├── birthday.html                # Birthday greeting page
+├── message.html                 # Personal message page
+├── photos.html                  # Photo gallery
+├── videoo.html                  # Video page
+├── why-you-are-so-special/      # Special qualities page
+├── media/                       # Images and videos
+├── vercel.json                  # Vercel deployment config
+└── README.md
 ```
 
-If you want me to continue: I can normalize filenames (replace spaces with hyphens), move static assets into a `public/` folder, and update links across HTML files.
+## Deployment
+
+Push to GitHub and connect the repo to [Vercel](https://vercel.com). Or deploy via CLI:
+
+```bash
+npx vercel --prod
+```
